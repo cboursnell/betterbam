@@ -1,0 +1,8 @@
+# generated files
+coverage
+ext/Rakefile
+
+# extensions
+*so
+*dylib
+*~
