@@ -11,9 +11,11 @@ class BetterBam
 
   attach_function "delete_pointer_to_betterbam_object",
                   "delete_pointer_to_betterbam_object", [:pointer], :void
+
   attach_function "betterbam_method", "betterbam_method", [:pointer], :int
+
   attach_function "create_betterbam_object",
-                  "create_betterbam_object", [:int, :int], :pointer
+                  "create_betterbam_object", [:pointer], :pointer
 
   attr_accessor :file
 
@@ -21,8 +23,9 @@ class BetterBam
     self.file = file
   end
 
-  def test
-    object = create_betterbam_object(11, 31)
+  def parse_bam
+    pointer = FFI::MemoryPointer.from_string(self.file)
+    object = create_betterbam_object(pointer)
     puts betterbam_method(object)
     delete_pointer_to_betterbam_object object
   end

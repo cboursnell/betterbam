@@ -12,7 +12,7 @@ class TestBetterBam < Test::Unit::TestCase
     end
 
     should "read a BAM file" do
-      @bb.test
+      @bb.parse_bam
     end
 
   end

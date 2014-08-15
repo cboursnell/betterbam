@@ -4,13 +4,14 @@
 #include <string>
 
 #include "api/BamReader.h"
+
 using namespace BamTools;
 
 using namespace std;
 
-betterbam_object::betterbam_object(int a, int b) : a_(a), b_(b) {}
+betterbam_object::betterbam_object(char *file) : file_(file) {}
 
 int betterbam_object::betterbam_method() {
-  return a_ + b_;
+  return 0;
 }
 

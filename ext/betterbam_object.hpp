@@ -1,9 +1,9 @@
 class betterbam_object {
   public:
-    betterbam_object(int a, int b);
+    betterbam_object(char *file);
 
     int betterbam_method();
 
   protected:
-    int a_, b_;
+    char *file_;
 };
