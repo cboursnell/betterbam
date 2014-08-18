@@ -6,3 +6,4 @@ libbetterbam.dylib
 
 # extensions
 *~
+*.o
